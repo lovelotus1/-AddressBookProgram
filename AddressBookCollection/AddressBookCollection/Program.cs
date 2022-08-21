@@ -9,7 +9,7 @@ namespace AddressBookCollection
             Console.WriteLine("Welcome To Address Book Collection");
             AddressBook book = new AddressBook();
 
-            Console.WriteLine("1.Create Contact");
+            Console.WriteLine("1.Create Contact\t2.AddContact");
 
             Console.WriteLine("\nEnter Your Choice");
             int c = Convert.ToInt32(Console.ReadLine());
@@ -23,7 +23,9 @@ namespace AddressBookCollection
                     case 1:
                         book.CreateContact();
                         break;
-
+                    case 2:
+                        book.AddContact();
+                        break;
                     default:
                         Console.WriteLine("\nEnter a valid choice");
                         break;
