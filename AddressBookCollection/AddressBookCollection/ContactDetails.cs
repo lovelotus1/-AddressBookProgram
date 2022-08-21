@@ -99,5 +99,12 @@ namespace AddressBookCollection
                 AddContact();
             }
         }
+        public void CheckDuplicateEntry()
+        {
+            foreach (ContactDetails person in contactDetails.FindAll(person => person.FirstName.Equals(contact.FirstName)))
+            {
+                Console.WriteLine("Contact Already Exist");
+            }
+        }
     }
 }
